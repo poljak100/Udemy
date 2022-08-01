@@ -15,9 +15,10 @@ class basket
 }
 
 $basket = new basket();
-$basket->itemsTotal = 50;
-$basket->shippingCost = 10;
+$basket->itemsTotal = 100;
+$basket->shippingCost = 30;
 $basket->discount = 30;
 
+$subTotal = $basket->calculateSubTotal();
 
-var_dump($basket->calculateSubTotal());
+var_dump($subTotal);
