@@ -14,6 +14,7 @@
     $comment = new comment('This is some comment text !', 10);
     ?>
 
+
     <p><?php echo $comment->text ?> by user:<?php echo $comment->userId ?></p>
 
 </body>

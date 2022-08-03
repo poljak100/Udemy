@@ -10,3 +10,4 @@ class Comment
         $this->userId = $userId;
     }
 }
+//
