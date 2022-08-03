@@ -19,5 +19,3 @@ $DinoObject->followerCount = '250';
 echo '<pre/>';
 
 print_r($DinoObject);
-
-//

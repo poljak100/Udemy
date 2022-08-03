@@ -39,4 +39,3 @@ $playlist->addSong($korn);
 echo '<pre/>';
 
 print_r($playlist->songs);
-//
