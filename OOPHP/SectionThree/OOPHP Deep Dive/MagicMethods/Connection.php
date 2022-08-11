@@ -4,6 +4,7 @@ class Connection
 {
     private static int $count = 0;
     private string $connectionId;
+    private int $conferenceId = 1234;
 
 
 
@@ -22,6 +23,13 @@ class Connection
         self::$count--;
     }
 
+
+    public function __get($name)
+    {
+        return $this->$name;
+    }
+
+
     public function setConnectionId($ipAddress)
     {
         if (filter_var($ipAddress, FILTER_VALIDATE_IP)) {
@@ -34,5 +42,6 @@ class Connection
 
     public function getConnectionId()
     {
+        return $this->connectionId;
     }
 }
