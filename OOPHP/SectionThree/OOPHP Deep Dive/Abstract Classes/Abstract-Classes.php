@@ -12,7 +12,8 @@
     <?php
     require_once 'DataModel.php';
 
-    $dataModel = new dataModel()
+    $dataModel = new DataModel();
+    $dataModel->save();
 
     ?>
 </body>
