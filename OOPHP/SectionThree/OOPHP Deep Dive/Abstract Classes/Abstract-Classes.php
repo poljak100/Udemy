@@ -10,11 +10,10 @@
 
 <body>
     <?php
-    require_once 'DataModel.php';
+    require_once 'User.php';
 
-    $dataModel = new DataModel();
-    $dataModel->save();
-
+    $user = new User();
+    $user->save();
     ?>
 </body>
 
