@@ -1,5 +1,7 @@
 <?php
 
+use CsvFileReader as GlobalCsvFileReader;
+
 require_once 'FileReaderInterface.php';
 
 class CsvFileReader implements FileReaderInterface
@@ -24,3 +26,9 @@ class CsvFileReader implements FileReaderInterface
         return $items;
     }
 }
+
+$fileReader = new GlobalCsvFileReader();
+$items = $fileReader->readFileAsAssociativeArray('inventory.csv');
+
+echo '<pre>';
+print_r($items) . PHP_EOL;
