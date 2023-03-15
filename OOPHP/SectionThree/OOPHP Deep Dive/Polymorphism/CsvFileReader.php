@@ -1,14 +1,12 @@
 <?php
 
-use CsvFileReader as GlobalCsvFileReader;
-
 require_once 'FileReaderInterface.php';
 
 class CsvFileReader implements FileReaderInterface
 {
     public function readFileAsAssociativeArray(string $filename): array
     {
-        // Get the rows from the file as arrays
+        
         $rows = array_map('str_getcsv', file($filename));
 
         // Separate the header
@@ -27,8 +25,3 @@ class CsvFileReader implements FileReaderInterface
     }
 }
 
-$fileReader = new GlobalCsvFileReader();
-$items = $fileReader->readFileAsAssociativeArray('inventory.csv');
-
-echo '<pre>';
-print_r($items) . PHP_EOL;

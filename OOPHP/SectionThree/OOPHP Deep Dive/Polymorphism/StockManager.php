@@ -1,9 +1,16 @@
 <?php
 
+require_once 'FileReaderInterface.php';
+
 class StockManager
 {
-    public function upateStockFromFile(string $filename, CsvFileReader $csvFileReader)
+    public function updateStockFromFile(string $filename, FileReaderInterface $fileReader)
     {
-        $stockItems = $csvFileReader->readFileAsAssociativeArray($filename);
+        $stockItems = $fileReader->readFileAsAssociativeArray($filename);
+
+        foreach ($stockItems as $stockItem) {
+
+            print 'Updating the database with item: ' . $stockItem['name'] . '<br>';
+        }
     }
 }

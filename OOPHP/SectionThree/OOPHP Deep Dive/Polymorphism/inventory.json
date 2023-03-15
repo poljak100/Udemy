@@ -13,10 +13,5 @@
         "item_id": "3",
         "name": "Stove",
         "price": "50"
-    },
-    {
-        "item_id":"4",
-        "name":"Monitor",
-        "price":"400"
     }
 ]

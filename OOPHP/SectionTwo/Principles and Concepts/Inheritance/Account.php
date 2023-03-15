@@ -4,7 +4,7 @@
 class Account
 {
     public $accountNumber;
-    public $blanace;
+    public $balance;
 
     public function deposit($amount)
     {
