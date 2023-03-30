@@ -8,7 +8,7 @@ class basket
 
     public function calculateSubTotal()
     {
-        $subTotal = $this->itemsTotal + $this->shippingCost - $this->discount;
+        $subTotal =  $this->itemsTotal +  $this->shippingCost - $this->discount;
 
         return $subTotal;
     }
