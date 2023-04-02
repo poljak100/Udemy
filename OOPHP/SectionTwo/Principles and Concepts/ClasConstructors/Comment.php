@@ -2,12 +2,14 @@
 
 class Comment
 {
-    public $text;
-    public $userId;
-    public function __construct($text, $userId)
+    public $name;
+    public $age;
+    public $country;
+
+    public function __construct($name, $age, $country)
     {
-        $this->text = $text;
-        $this->userId = $userId;
+        $this->name = $name;
+        $this->age = $age;
+        $this->country = $country;
     }
 }
-//

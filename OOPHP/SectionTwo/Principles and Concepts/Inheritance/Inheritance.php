@@ -5,27 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inheritance</title>
+    <title>Document</title>
 </head>
 
 <body>
 
-
     <?php
 
-    require_once 'PremiumCheckingAccount.php';
+    require_once 'PremiumAccount.php';
+
+    $account = new PremiumAccount();
+
+    $account->deposite(400);
+    $account->withdraw(300);
+    $account->transfer(20);
+    echo 'minimum: ' . $account->minimum . '<br>';
 
 
-    $PremiumCheckingAccount = new PremiumCheckingAccount();
 
-    echo $PremiumCheckingAccount->minimumbalance . '<br>';
-
-    $PremiumCheckingAccount->deposit(20);
-    $PremiumCheckingAccount->withdraw(10);
-    $PremiumCheckingAccount->Transfer(700);
 
 
     ?>
+
 </body>
 
 </html>
