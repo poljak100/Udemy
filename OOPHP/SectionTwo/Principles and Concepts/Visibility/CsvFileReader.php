@@ -2,7 +2,13 @@
 
 require_once 'FileReader.php';
 
-class CsvFileReader extends FileReader
+
+class csv extends FileReader
 {
-    //
+
+    public $nesto = 'nesto';
+    public function getNesto()
+    {
+        return $this->nesto;
+    }
 }

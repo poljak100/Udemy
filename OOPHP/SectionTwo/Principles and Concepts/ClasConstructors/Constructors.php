@@ -13,11 +13,12 @@
     <?php
     require_once 'Comment.php';
 
-    $comment = new Comment('Moje je ime Dino, ', 29, 'I dolazim iz Hrvatske')
+    $comment = new Comment('Moje je ime Dino, ', 29, 'i dolazim iz Hrvatske');
 
     ?>
 
-    <p><?php echo $comment->name ?> Imam <?php echo $comment->age ?> godina , <?php echo $comment->country ?></p>
+    <?php echo $comment->name ?> Imam <?php echo $comment->age ?> godina ,<?php echo $comment->country ?>
+
 
 </body>
 

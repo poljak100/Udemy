@@ -1,22 +1,20 @@
 <?php
 
-
 class Account
 {
-    public $accountNumber;
     public $balance;
 
-    public function deposit($amount)
+    public function withdraw($key)
     {
-        echo 'depositing ' . $amount . '<br>';
+        echo 'Im withdrawing: ' . $key . '<br>';
     }
 
-    public function withdraw($amount)
+    public function deposite($amount)
     {
-        echo 'withdrawing ' . $amount .  '<br>';
+        echo 'Im depositing: ' . $amount . '<br>';
     }
 
-    public function getbalance()
+    public function GetBalance()
     {
         return $this->balance;
     }
