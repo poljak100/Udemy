@@ -2,20 +2,20 @@
 
 class Bid
 {
-    private $minimumBid = 5;
-    private $bidAmount;
+    private $money = 5;
+    private $bid;
 
-    public function setBidAmount($amount)
+    public function setMinimum($amount)
     {
-        if ($amount < $this->minimumBid) {
-            $this->bidAmount = $this->minimumBid;
+        if ($amount < $this->money) {
+            $this->bid = $this->money;
             return;
         }
-        $this->bidAmount = $amount;
+        $this->bid = $amount;
     }
 
-    public function getBidAmount()
+    public function getMinimum()
     {
-        return $this->bidAmount;
+        return $this->bid;
     }
 }
