@@ -2,22 +2,31 @@
 
 class Reservation
 {
-    private $host = 'Host class';
-    private $guest = 'guest class';
+    private $guest = 'Im guest';
+    private $host = 'Im host';
+    private $me = ' Me';
 
     public function cancel()
     {
-        $this->sendCancelNotification();
-        $this->refundGuest();
+
+        $this->guest();
+        $this->host();
+        echo 'LOTR ' . '<br>';
+        $this->me();
     }
 
-    private function sendCancelNotification()
+    public function guest()
     {
-        echo 'Sending notification to' . $this->host . '<br>';
+        echo 'Guess  Im: ' . $this->guest . '<br>';
     }
 
-    private function refundGuest()
+    public function host()
     {
-        echo 'Refunding' . $this->guest . '<br>';
+        echo 'Guess  Im: ' . $this->host . '<br>';
+    }
+
+    public function me()
+    {
+        echo 'Ola: ' . $this->me . '<br>';
     }
 }

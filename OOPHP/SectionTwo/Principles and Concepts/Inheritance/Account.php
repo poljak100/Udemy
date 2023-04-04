@@ -2,7 +2,7 @@
 
 class Account
 {
-    public $balance;
+    public $balance = 2;
 
     public function withdraw($key)
     {

@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <?php
-    require 'Reservation.php';
 
-    $reservation = new Reservation();
-    $reservation->cancel();
+    <?php
+    require_once 'Reservation.php';
+    $new = new Reservation();
+    $new->cancel();
 
 
     ?>
+
 </body>
 
 </html>
