@@ -1,44 +1,50 @@
 <?php
 
-
 class Connection
 {
-    private static $count = 0;
-    private  $connectionId = 123;
-    private  $ConId = 1234;
-
-    public function __get($connectionId)
-    {
-        return $this->connectionId;
-    }
-
+    private static  $count = 0;
+    private  $connectionId;
+    private  $conferenceId = 1234;
 
     public function __construct()
     {
         self::$count++;
     }
 
+
     public function __destruct()
     {
-        return self::$count--;
+        self::$count--;
     }
+
+
+    public function __get($name)
+    {
+        return $this->$name;
+    }
+
+
+    public function __toString()
+    {
+        return "Conference ID: {$this->conferenceId} <br> Connection ID: {$this->connectionId}";
+    }
+
 
     public function getCount()
     {
         return self::$count;
     }
 
-    public function setConnection($ipAddres)
+
+    public function setConnectionId($ipAddress)
     {
-        if (filter_var($ipAddres, FILTER_VALIDATE_IP)) {
-            $this->connectionId = $ipAddres . '_' . self::$count;
+        if (filter_var($ipAddress, FILTER_VALIDATE_IP)) {
+
+            $this->connectionId = $ipAddress . '_' . self::$count;
+
             return;
         }
-        die('Not a valid IP addres: ');
-    }
 
-    public function getConnectionId()
-    {
-        return $this->ConId;
+        die('Not a valid ip address');
     }
 }
