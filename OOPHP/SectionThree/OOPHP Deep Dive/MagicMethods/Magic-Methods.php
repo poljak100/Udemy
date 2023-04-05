@@ -10,12 +10,22 @@
 
 <body>
     <?php
+
+
+
     require_once 'Connection.php';
     $connection1 = new Connection();
+    $connection1->setConnection('127.0.0.1');
+
+    //unset($connection1);
 
     ?>
 
     <p><?php echo 'Im connection to: ' . $connection1->getCount() ?></p>
+    <p><?php echo 'Im  to: ' . $connection1->ConId; ?></p>
+    <p><?php echo 'Getting: ' . $connection1->getConnectionId(); ?></p>
+
+
 </body>
 
 </html>
