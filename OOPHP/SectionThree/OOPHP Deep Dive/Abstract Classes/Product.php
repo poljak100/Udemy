@@ -9,39 +9,26 @@ class Product extends DataModel
     protected string $tableName = 'product';
 
 
-    /** 
-     *@return string
-     */
 
-    public function getName(): string
+
+    public function getName()
     {
         return $this->name;
     }
 
-    /**
-     * @param string $ name
-     */
 
-    public function setName(string $name): void
+    public function setName($name)
     {
         $this->name = $name;
     }
 
-    /**
-     * @return float
-     */
-
-    public function getPrice(): float
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param float $price
-     */
-
-    public function setPrice(float $price): void
+    public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    public function getPrice()
+    {
+        return $this->price;
     }
 }
