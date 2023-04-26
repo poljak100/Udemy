@@ -14,6 +14,8 @@
 
     $user = new User();
     $user->save();
+
+
     ?>
 </body>
 

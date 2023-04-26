@@ -4,5 +4,5 @@ require_once 'CAccount.php';
 
 class PremiumAccount extends CAccount
 {
-    public $minimum = 5000;
+    public $minimum = 5099;
 }

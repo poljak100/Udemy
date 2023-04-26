@@ -13,15 +13,15 @@
     require 'Cylinder.php';
     require 'Sphere.php';
 
-    $cylinder = new Cylinder(['radius' => 5, 'height' => 10]);
+    $cylinder = new Cylinder(['radius' => 234324, 'height' => 232323]);
     $cylinderVolume = $cylinder->volume();
 
-    $sphere = new Sphere(['radius' => 5]);
+    $sphere = new Sphere(['radius' => 4]);
     $sphereVolume = $sphere->volume();
     print_r($sphereVolume);
-        
 
-        
+
+
     ?>
 </body>
 

@@ -11,18 +11,17 @@ class Reservation
 
         $this->guest();
         $this->host();
-        echo 'LOTR ' . '<br>';
         $this->me();
     }
 
     public function guest()
     {
-        echo 'Guess  Im: ' . $this->guest . '<br>';
+        echo 'Guess : ' . $this->guest . '<br>';
     }
 
     public function host()
     {
-        echo 'Guess  Im: ' . $this->host . '<br>';
+        echo 'Guess: ' . $this->host . '<br>';
     }
 
     public function me()

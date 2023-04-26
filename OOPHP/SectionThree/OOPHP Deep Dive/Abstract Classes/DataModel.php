@@ -2,10 +2,13 @@
 
 abstract class DataModel
 {
-    protected string $tableName = 'random-table-name';
+    protected string $tableName;
+    protected  $host;
+
 
     public function save()
     {
-        print_r('Saving data to table:' . $this->tableName);
+        echo ('Saving data to table:' . $this->tableName) . '<br>';
+        echo ('Saving :' . $this->host) . '<br>';
     }
 }

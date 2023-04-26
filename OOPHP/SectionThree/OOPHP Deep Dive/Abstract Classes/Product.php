@@ -5,8 +5,10 @@ require_once 'DataModel.php';
 class Product extends DataModel
 {
     private string $name;
-    private float $price;
-    protected string $tableName = 'product';
+    protected float $price;
+    protected string $tableName;
+    protected $host;
+
 
 
 
