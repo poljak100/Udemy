@@ -4,9 +4,9 @@ require_once 'FileReaderInterface.php';
 
 class CsvFileReader implements FileReaderInterface
 {
-    public function readFileAsAssociativeArray(string $filename): array
+    public function readFileAsAssociativeArray($filename)
     {
-        
+
         $rows = array_map('str_getcsv', file($filename));
 
         // Separate the header
@@ -24,4 +24,3 @@ class CsvFileReader implements FileReaderInterface
         return $items;
     }
 }
-
